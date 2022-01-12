@@ -1,5 +1,5 @@
 <template>
-  <div class="pageContainer" id="maingPageContainer">
+  <div class="pageContainer" id="mainPageContainer">
     <Header></Header>
     <TraingView></TraingView>
     <Footer></Footer>

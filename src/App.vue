@@ -8,37 +8,8 @@ export default {
   name: 'App',
   components: {
 
-  },
-  data() {
-    return{
-      trainingUnits: []
-    }
-  },
-  created() {
-    this.trainingUnits = [
-      {
-        date: "2-1-2020",
-        duration: 60,
-        trainedMuscles: ["Biceps" ,"Back"],
-        weight: 80,
-        comments: "nice"
-      },
-      {
-        date: "3-1-2020",
-        duration: 50,
-        trainedMuscles: ["Triceps" ,"Chest", "Correctives"],
-        weight: 80,
-        comments: "nice"
-      },
-      {
-        date: "4-1-2020",
-        duration: 75,
-        trainedMuscles: ["Legs" ,"Shoulder", "Abs"],
-        weight: 80,
-        comments: "nice"
-      }
-    ]
   }
+
 }
 </script>
 
