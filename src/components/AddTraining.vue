@@ -32,10 +32,10 @@
              id="weightInput"
              v-model="trainingUnit.weight">
 
-      <button @click="saveTrainingUnit">Submit</button>
-      <a class="likeabutton">
+      <button @click="saveTrainingUnit()" class="btn btn-primary">Submit</button>
+      <button type="btn btn-primary">
         <router-link to="/mainPage">return to Main Page</router-link>
-      </a>
+      </button>
     </form>
   </div>
 
@@ -52,7 +52,6 @@ export default {
   data() {
     return {
       trainingUnit: {
-        id: null,
         date: "",
         trainedMuscles: "",
         duration: "",
@@ -74,7 +73,6 @@ export default {
 
       TrainingUnitDataService.create(data)
           .then(response => {
-
           console.log("we got here")//for debugging
           this.trainingUnit.id = response.data.id;
           console.log(response.data);//also for debugging

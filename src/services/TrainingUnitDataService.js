@@ -24,14 +24,6 @@ class TrainingUnitDataService {
     deleteAll() {
         return http.delete(`/trainingUnits`);
     }
-
-    findByMuscle(muscle) {
-        return http.get(`/trainingUnits?trainedMuscles=${muscle}`);
-    }
-
-    findByDate(date) {
-        return http.get(`/trainingUnits?date=${date}`);
-    }
 }
 
 export default new TrainingUnitDataService();

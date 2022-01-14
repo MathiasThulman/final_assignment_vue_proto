@@ -12,7 +12,7 @@ export default new Router({
     routes: [
         { path: '/', component:  HomePage},
         { path: '/createAccountPage', component:CreateAccountPage},
-        {path: '/mainPage', component:MainPage},
+        { path: '/mainPage', component:MainPage},
         { path: '/addTrainingPage', component: AddTrainingPage}
     ],
     mode: "history"

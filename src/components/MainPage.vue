@@ -1,7 +1,11 @@
 <template>
   <div class="pageContainer" id="mainPageContainer">
     <Header></Header>
-    <TraingView></TraingView>
+    <div class="mainPageDiv">
+      <AddTraining></AddTraining>
+      <TrainingView></TrainingView>
+    </div>
+
     <Footer></Footer>
   </div>
 </template>
@@ -9,13 +13,20 @@
 <script>
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import TraingView from "@/components/TrainigView";
+import TrainingView from "@/components/TrainingView";
+import AddTraining from "./AddTraining";
 export default {
   name: "MainPage",
-  components: {TraingView, Footer, Header}
+  components: {AddTraining, TrainingView, Footer, Header}
 }
 </script>
 
 <style scoped>
 
+.mainPageDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
 </style>
