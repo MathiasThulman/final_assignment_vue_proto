@@ -32,7 +32,7 @@
             <td>{{ trainingUnit.trainedMuscles }}</td>
             <td>{{ trainingUnit.weight }}</td>
             <td>
-              <button class="btn btn-danger">Delete</button>
+              <button class="btn btn-danger" @click="deleteTrainingUnit(trainingUnit.id)">Delete</button>
             </td>
           </tr>
           </tbody>
@@ -60,34 +60,34 @@ export default {
     };
   },
 
+  created() {
+    this.retrieveTrainingUnits()
+  },
+
   methods: {
-    retrieveTrainingUnits() {
+    async retrieveTrainingUnits() {
       TrainingUnitDataService.getAll()
           .then(response => {
             this.trainingUnits = response.data;
-            if (this.muscle === "") {
-              this.trainingUnits = this.filterByMuscle()
-            }
-            console.log(response.data) //for debugging
+            // if (this.muscle === "") {
+            //   this.trainingUnits = this.filterByMuscle()
+            // }
           })
           .catch(e => {
             console.log(e)
           });
     },
 
-    beforeMount() {
-      this.retrieveTrainingUnits()
-    },
 
     deleteTrainingUnit(id) {
       TrainingUnitDataService.delete(id)
     },
 
-    filterByMuscle() {
-      return this.data.trainingUnits.filter(function (e) {
-        return e.trainingUnits.contains(this.data.muscle)
-      });
-  },
+  //   filterByMuscle() {
+  //     return this.data.trainingUnits.filter(function (e) {
+  //       return e.trainingUnits.contains(this.data.muscle)
+  //     });
+  // },
 
     deleteAll() {
       if(confirm("are you sure about that?")){
@@ -127,14 +127,14 @@ export default {
 #trainingViewContainer {
   display: flex;
   color: white;
-  justify-content: center;
-  align-content: center;
+  justify-content: flex-start;
+  align-content: flex-start;
   flex-direction: column;
   border-radius: 10px 10px 10px 10px;
   border-style: outset;
   border-color: black;
   padding: 40px;
-  background-color: gray;
+  background-color: slategrey;
 }
 
 #navigationButtons {
@@ -152,6 +152,7 @@ export default {
 #viewWrapper {
   display: flex;
   justify-content: center;
+
 
 }
 
