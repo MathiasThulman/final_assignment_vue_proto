@@ -2,22 +2,22 @@
   <div class="pageContainer" id="mainPageContainer">
     <Header></Header>
     <div class="mainPageDiv">
-      <AddTraining></AddTraining>
-      <TrainingView></TrainingView>
-    </div>
 
-    <Footer></Footer>
+      <AddTraining></AddTraining>
+
+      <TrainingView></TrainingView>
+
+    </div>
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import TrainingView from "@/components/TrainingView";
 import AddTraining from "./AddTraining";
 export default {
   name: "MainPage",
-  components: {AddTraining, TrainingView, Footer, Header}
+  components: {AddTraining, TrainingView, Header}
 }
 </script>
 

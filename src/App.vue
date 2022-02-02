@@ -49,6 +49,7 @@ export default {
 .formWrapper {
   display: flex;
   justify-content: center;
+  height: 100%;
 }
 
 .likeabutton {

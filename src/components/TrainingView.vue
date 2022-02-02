@@ -18,7 +18,7 @@
           <thead>
           <tr>
             <th scope="col">Date</th>
-            <th scope="col">duration</th>
+            <th scope="col">sets</th>
             <th scope="col">trained muscles</th>
             <th scope="col">weight</th>
           </tr>
@@ -38,10 +38,7 @@
           </tbody>
         </table>
       </div>
-
     </div>
-
-
   </div>
 
 </template>
@@ -60,6 +57,7 @@ export default {
     };
   },
 
+
   created() {
     this.retrieveTrainingUnits()
   },
@@ -69,9 +67,12 @@ export default {
       TrainingUnitDataService.getAll()
           .then(response => {
             this.trainingUnits = response.data;
-            // if (this.muscle === "") {
-            //   this.trainingUnits = this.filterByMuscle()
-            // }
+            if (this.muscle !== "") {
+              this.trainingUnits = this.filterByMuscle(this.muscle)
+            }
+            if (this.date !== "") {
+              this.trainingUnits = this.filterByDate(this.date)
+            }
           })
           .catch(e => {
             console.log(e)
@@ -83,11 +84,17 @@ export default {
       TrainingUnitDataService.delete(id)
     },
 
-  //   filterByMuscle() {
-  //     return this.data.trainingUnits.filter(function (e) {
-  //       return e.trainingUnits.contains(this.data.muscle)
-  //     });
-  // },
+    filterByMuscle(muscle) {
+      return this.trainingUnits.filter(function (e) {
+        return e.trainedMuscles.includes(muscle)
+      });
+  },
+
+    filterByDate(filterDate) {
+      return this.trainingUnits.filter(function (e) {
+        return e.date === filterDate
+      });
+    },
 
     deleteAll() {
       if(confirm("are you sure about that?")){
@@ -95,27 +102,6 @@ export default {
       }
 
     }
-  // searchByMuscle() {
-  //   TrainingUnitDataService.findByMuscle(this.muscle)
-  //     .then(response => {
-  //       this.trainingUnits = response.data;
-  //       console.log(response.data) //for debugging
-  //     })
-  //   .catch(e => {
-  //     console.log(e)
-  //   });
-  // },
-
-  // searchByDate() {
-  //   TrainingUnitDataService.findByDate(this.date)
-  //       .then(response => {
-  //         this.trainingUnits = response.data;
-  //         console.log(response.data) //for debugging
-  //       })
-  //       .catch(e => {
-  //         console.log(e)
-  //       });
-  // },
 
 
 }
