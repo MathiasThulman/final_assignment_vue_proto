@@ -7,6 +7,7 @@
 
       <TrainingView></TrainingView>
 
+      <Footer></Footer>
     </div>
   </div>
 </template>
@@ -15,9 +16,10 @@
 import Header from "@/components/Header";
 import TrainingView from "@/components/TrainingView";
 import AddTraining from "./AddTraining";
+import Footer from "./Footer";
 export default {
   name: "MainPage",
-  components: {AddTraining, TrainingView, Header}
+  components: {Footer, AddTraining, TrainingView, Header}
 }
 </script>
 

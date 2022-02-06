@@ -18,9 +18,9 @@ export default {
   position: fixed;
   left: 0;
   bottom: 0;
+  right: 0;
   width: 100%;
-  background-color: silver;
-  color: black;
+  background-color: black;
   text-align: center;
 }
 </style>

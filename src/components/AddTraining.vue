@@ -18,7 +18,7 @@
              id="durationInput"
              v-model="trainingUnit.duration">
 
-      <label for="muscleInput">Trained Muscles</label>
+      <label for="muscleInput">exercise</label>
       <input type="text"
              class="formInput"
              placeholder="f.e. deadlift/bench press"

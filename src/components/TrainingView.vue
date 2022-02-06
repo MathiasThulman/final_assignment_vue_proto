@@ -19,7 +19,7 @@
           <tr>
             <th scope="col">Date</th>
             <th scope="col">sets</th>
-            <th scope="col">trained muscles</th>
+            <th scope="col">exercice</th>
             <th scope="col">weight</th>
           </tr>
           </thead>
@@ -81,7 +81,10 @@ export default {
 
 
     deleteTrainingUnit(id) {
-      TrainingUnitDataService.delete(id)
+      return  TrainingUnitDataService.delete(id)
+      .then(
+          this.retrieveTrainingUnits
+      )
     },
 
     filterByMuscle(muscle) {
@@ -116,11 +119,11 @@ export default {
   justify-content: flex-start;
   align-content: flex-start;
   flex-direction: column;
-  border-radius: 10px 10px 10px 10px;
+  /*border-radius: 10px;*/
   border-style: outset;
   border-color: black;
-  padding: 40px;
-  background-color: slategrey;
+  /*padding: 20px;*/
+  background-color: white;
 }
 
 #navigationButtons {
@@ -128,6 +131,8 @@ export default {
   justify-content: center;
   align-content: center;
   flex-direction: row;
+  background-color: black;
+  padding: 10px;
 }
 
 .trainingViewButton {

@@ -20,22 +20,24 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /*margin-top: 60px;*/
+
+
 }
 
 .formContainer {
-  margin: 60px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 10px 10px 10px 10px;
+  /*border-radius: 10px 10px 10px 10px;*/
   border-color: black;
-  border-style: groove;
-  background-color: slategrey;
+  border-style: outset;
+  background-color: white;
 }
 
 .formInput {
-  margin: 20px
+  margin: 10px
 }
 
 .form{
