@@ -18,7 +18,7 @@
           <thead>
           <tr>
             <th scope="col">Date</th>
-            <th scope="col">sets</th>
+            <th scope="col">reps</th>
             <th scope="col">exercice</th>
             <th scope="col">weight</th>
           </tr>

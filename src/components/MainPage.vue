@@ -7,8 +7,8 @@
 
       <TrainingView></TrainingView>
 
-      <Footer></Footer>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 

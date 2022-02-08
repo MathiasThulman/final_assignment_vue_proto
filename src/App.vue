@@ -15,6 +15,9 @@ export default {
 
 <style>
 .pageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
