@@ -1,7 +1,7 @@
 <template>
   <div class="headerdiv">
-    <h1>Training Logbook</h1>
-    <h6>securing progressive overload the modern way</h6>
+    <h1 class="text-uppercase fw-bold mb-4">Training Logbook</h1>
+    <h6 class="fas fa-home me-3">securing progressive overload the modern way</h6>
   </div>
 
 </template>
@@ -15,10 +15,7 @@ export default {
 <style scoped>
 
 .headerdiv {
-  /*display: flex;*/
   text-align: left;
-  /*margin-left: 100px;*/
-  /*margin-right: 100px;*/
   color: white;
   background-image: url("../img/GoProposal-Page-Header-Background.webp");
   background-color: black;

@@ -17,13 +17,13 @@ export default {
 .pageContainer {
   display: flex;
   flex-direction: column;
-  justify-items: flex-start;
+  align-content: space-between;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  /*margin-top: 60px;*/
+
 
 
 }

@@ -36,9 +36,8 @@ export default {
 
 <style scoped>
 #footerContainer{
-  margin-top: 20px;
   bottom: 0;
   width: 100%;
-
+  position: fixed;
 }
 </style>
